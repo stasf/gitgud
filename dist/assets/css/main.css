@@ -1,0 +1,92 @@
+html {
+  font-family: Arial;
+  font-weight: bold;
+  background: #58b6e7;
+  overflow-x: hidden; }
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: visible;
+  background: #58b6e7; }
+
+.row .col-3-12 {
+  background: white; }
+
+.pageSection.parbase.section.character-blurb {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 10 10em;
+      -ms-flex: 1 10 10em;
+          flex: 1 10 10em;
+  margin-left: -8em;
+  border: solid black 3px;
+  border-radius: 5px;
+  -webkit-transform: skewX(-5deg);
+      -ms-transform: skewX(-5deg);
+          transform: skewX(-5deg);
+  box-shadow: 6px 6px 0px #b2b2b2;
+  margin-top: 30%; }
+
+.pageSection.parbase.section.character-blurb p {
+  padding-left: 2.5em;
+  -webkit-transform: skewX(5deg);
+      -ms-transform: skewX(5deg);
+          transform: skewX(5deg); }
+
+.par.parsys {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.row:before {
+  content: '';
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 32%;
+  margin-left: -2em;
+  padding-right: 2em;
+  margin-top: 7em;
+  border-bottom: solid #4386a9 24px; }
+
+.parbase.imageRenditions.section {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 10em;
+      -ms-flex: 1 0 10em;
+          flex: 1 0 10em;
+  z-index: 1; }
+
+.parbase.image.section {
+  /*fingerprint*/
+  -webkit-transform: scale(0.75, 0.75);
+      -ms-transform: scale(0.75, 0.75);
+          transform: scale(0.75, 0.75);
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.6; }

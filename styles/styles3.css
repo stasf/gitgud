@@ -11,38 +11,11 @@ html {
 	display: flex; 
 	flex-flow: row wrap; 
 	justify-content: center;
+	align-items: center;
 	overflow: visible;
 	background: #58b6e7;
 
-} 
-
-/*.row .col-3-12 {	
- 	flex: 0 1 320px;
- 	background: #FFFFFF;
-	margin: 0 -9999rem;
- 	padding: 0.25rem 9999rem;
-}*/
-
-
-/*.row:before {
-	content: '';
-	position: absolute;
-	margin-left: -960px;
-	width: 9600px;
-	height: 130px;
-	background: #58b6e7;
-
-}*/
-
-/*.row:after {
-	content: '';
-	position: relative;
-	margin-left: -960px;
-	width: 9600px;
-	height: 24px;
-	left: 100px;
-	background: #4386a9;
-}*/
+}
 
 
 .pageSection.parbase.section.character-blurb {
