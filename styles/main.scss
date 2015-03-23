@@ -1,3 +1,4 @@
+@import 'reset';
 $sim-blue: #58b6e7;
 
 
@@ -12,57 +13,59 @@ html {
 	display: flex; 
 	flex-flow: row wrap; 
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	overflow: visible;
 	background: $sim-blue;
+	height: auto;
 }
 
-.row .col-3-12 {
-	background: white;
+.row .col-3-12 {	
+ 	flex: 1 0 15em;
+}
 
+@media (min-width: 1520px) {
+	.pageSection.parbase.section.character-blurb {
+		margin-right: 12em;
+	}
 }
 
 .pageSection.parbase.section.character-blurb {
-	flex: 1 10 10em;
+	flex: 1 1 10em;
+	margin-bottom: 5em;
 	margin-left: -8em;
 	border: solid black 3px;
 	border-radius: 5px;
 	transform: skewX(-5deg);
 	box-shadow: 6px 6px 0px #b2b2b2;
 	margin-top: 30%;
-}
 
-.pageSection.parbase.section.character-blurb p {
+	p {
+	padding: 1em;
 	padding-left: 2.5em;
 	transform: skewX(5deg);
+	}
 }
-
 
 .par.parsys {
 	display: flex;
-	justify-content: center;
 	flex-flow: row nowrap;
-	align-items: center;
+	align-items: flex-end;
 }
 
 .row:before {
+	flex: 1 0 10em;
 	content: '';
 	position: absolute;
 	background: white;
 	width: 100%;
-	height: 32%;
-
-	margin-left: -2em;
-	padding-right: 2em;
-	margin-top: 7em;
-
+	height: 30%;
+	margin-top: 8em;
 	border-bottom: solid #4386a9 24px;
-	
 }
 
-
 .parbase.imageRenditions.section {
-	flex: 1 0 10em;	
+	padding-right: -2em;
+	flex: 1 0 10em;
 	z-index: 1;	
 }
 
