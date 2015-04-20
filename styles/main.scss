@@ -1,7 +1,8 @@
 @import 'reset';
 
 $sim-blue: #58b6e7;
-$desktop-breaakpoint: 1420px;
+$desktop-breakpoint: 1420px;
+$mobile-stack: 720px;
 
 
 html {
@@ -9,6 +10,12 @@ html {
 	font-weight: bold;
 	background: $sim-blue;
 	overflow-x: hidden;
+}
+
+@media (min-width: $mobile-stack) {
+	.row {
+		flex-flow: column wrap;
+	}
 }
 
 .row { 
@@ -26,11 +33,13 @@ html {
 	}
 }
 
-@media (min-width: $desktop-breaakpoint) {
+@media (min-width: $desktop-breakpoint) {
 	.pageSection.parbase.section.character-blurb {
 		margin-right: 12em;
 	}
 }
+
+
 
 .pageSection {
 	&.parbase {

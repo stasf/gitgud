@@ -1,10 +1,46 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 html {
   font-family: Arial;
   font-weight: bold;
   background: #58b6e7;
   overflow-x: hidden; }
 
+@media (min-width: 720px) {
+  .row {
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap; } }
+
 .row {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,21 +52,29 @@ html {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   overflow: visible;
-  background: #58b6e7; }
+  background: #58b6e7;
+  height: auto; }
+  .row .col-3-12 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 15em;
+        -ms-flex: 1 0 15em;
+            flex: 1 0 15em; }
 
-.row .col-3-12 {
-  background: white; }
+@media (min-width: 1420px) {
+  .pageSection.parbase.section.character-blurb {
+    margin-right: 12em; } }
 
 .pageSection.parbase.section.character-blurb {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 10 10em;
-      -ms-flex: 1 10 10em;
-          flex: 1 10 10em;
+  -webkit-flex: 1 1 10em;
+      -ms-flex: 1 1 10em;
+          flex: 1 1 10em;
+  margin-bottom: 5em;
   margin-left: -8em;
   border: solid black 3px;
   border-radius: 5px;
@@ -39,50 +83,34 @@ html {
           transform: skewX(-5deg);
   box-shadow: 6px 6px 0px #b2b2b2;
   margin-top: 30%; }
-
-.pageSection.parbase.section.character-blurb p {
-  padding-left: 2.5em;
-  -webkit-transform: skewX(5deg);
-      -ms-transform: skewX(5deg);
-          transform: skewX(5deg); }
+  .pageSection.parbase.section.character-blurb p {
+    padding: 1em;
+    padding-left: 2.5em;
+    -webkit-transform: skewX(5deg);
+        -ms-transform: skewX(5deg);
+            transform: skewX(5deg); }
 
 .par.parsys {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-flex-flow: row nowrap;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
-.row:before {
-  content: '';
-  position: absolute;
-  background: white;
-  width: 100%;
-  height: 32%;
-  margin-left: -2em;
-  padding-right: 2em;
-  margin-top: 7em;
-  border-bottom: solid #4386a9 24px; }
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
 
 .parbase.imageRenditions.section {
+  padding-right: -2em;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 10em;
       -ms-flex: 1 0 10em;
           flex: 1 0 10em;
   z-index: 1; }
-
 .parbase.image.section {
-  /*fingerprint*/
   -webkit-transform: scale(0.75, 0.75);
       -ms-transform: scale(0.75, 0.75);
           transform: scale(0.75, 0.75);
@@ -90,3 +118,18 @@ html {
   top: 0;
   right: 0;
   opacity: 0.6; }
+
+.row:before {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 10em;
+      -ms-flex: 1 0 10em;
+          flex: 1 0 10em;
+  content: '';
+  position: absolute;
+  background: white;
+  width: 100%;
+  margin-top: 0;
+  /*to fix flex*/
+  top: 8em;
+  bottom: -1em;
+  border-bottom: solid #4386a9 24px; }
