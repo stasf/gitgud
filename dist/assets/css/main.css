@@ -33,12 +33,6 @@ html {
   background: #58b6e7;
   overflow-x: hidden; }
 
-@media (min-width: 720px) {
-  .row {
-    -webkit-flex-flow: column wrap;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap; } }
-
 .row {
   position: relative;
   display: -webkit-box;

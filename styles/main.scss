@@ -12,11 +12,6 @@ html {
 	overflow-x: hidden;
 }
 
-@media (min-width: $mobile-stack) {
-	.row {
-		flex-flow: column wrap;
-	}
-}
 
 .row { 
 	position: relative;
@@ -38,8 +33,6 @@ html {
 		margin-right: 12em;
 	}
 }
-
-
 
 .pageSection {
 	&.parbase {
@@ -63,6 +56,22 @@ html {
 		}
 	}	
 }
+
+// @media (max-width: $mobile-stack) {
+// 	.row {
+// 		flex-direction: column;
+// 	}
+
+// 	.pageSection {
+// 		&.parbase {
+// 			&.section {
+// 				&.character-blurb {
+// 					flex: 1 1 33%;
+// 				}
+// 			}
+// 		}	
+// 	}
+// }
 
 .par {
 	&.parsys {
